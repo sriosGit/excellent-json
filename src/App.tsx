@@ -13,7 +13,7 @@ import {
   type CollisionDetection
 } from '@dnd-kit/core'
 import { sortableKeyboardCoordinates } from '@dnd-kit/sortable'
-import { useState, useCallback, createContext, useContext } from 'react'
+import { useState, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useStore } from './store/useStore'
 import { FileUploader } from './components/FileUploader'
@@ -22,10 +22,8 @@ import { ColumnList } from './components/ColumnList'
 import { SchemaBuilder } from './components/SchemaBuilder'
 import { JSONPreview } from './components/JSONPreview'
 import { LanguageSwitcher } from './components/LanguageSwitcher'
-
-// Contexto para compartir el ID del grupo sobre el que estamos
-export const DragOverGroupContext = createContext<string | null>(null)
-export const useDragOverGroup = () => useContext(DragOverGroupContext)
+import { Logo } from './components/Logo'
+import { DragOverGroupContext } from './context/DragOverGroupContext'
 
 // Estrategia de colisión personalizada que prioriza los droppables de grupos
 const customCollisionDetection: CollisionDetection = (args) => {
@@ -270,21 +268,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-[var(--color-accent)]/10 rounded-xl">
-                <svg 
-                  className="w-6 h-6 text-[var(--color-accent)]" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  stroke="currentColor"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V9c0-2-1-3-3-3h-4l-2-2H7c-2 0-3 1-3 3z" 
-                  />
-                </svg>
-              </div>
+              <Logo />
               <div>
                 <h1 className="text-xl font-bold text-[var(--color-text)]">
                   {t('app.title')}

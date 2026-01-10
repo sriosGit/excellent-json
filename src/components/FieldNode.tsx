@@ -5,7 +5,7 @@ import { CSS } from '@dnd-kit/utilities'
 import { useTranslation } from 'react-i18next'
 import type { SchemaNode } from '../types'
 import { useStore } from '../store/useStore'
-import { useDragOverGroup } from '../App'
+import { useDragOverGroup } from '../context/DragOverGroupContext'
 
 interface FieldNodeProps {
   node: SchemaNode
