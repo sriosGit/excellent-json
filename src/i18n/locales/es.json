@@ -1,0 +1,56 @@
+{
+  "app": {
+    "title": "Excellent JSON",
+    "subtitle": "Convierte Excel a JSON con estructura personalizada",
+    "footer": "Todo el procesamiento se realiza en tu navegador. Tus datos nunca salen de tu computadora."
+  },
+  "upload": {
+    "title": "Comienza subiendo tu archivo",
+    "subtitle": "Soportamos archivos Excel (.xlsx, .xls) y CSV",
+    "dropzone": "Arrastra tu archivo Excel aquí",
+    "or": "o",
+    "clickToSelect": "haz clic para seleccionar",
+    "processing": "Procesando archivo...",
+    "invalidFile": "Por favor selecciona un archivo Excel (.xlsx, .xls) o CSV"
+  },
+  "preview": {
+    "changeFile": "Cambiar archivo",
+    "rows": "filas",
+    "columns": "columnas",
+    "showingOf": "Mostrando {{shown}} de {{total}} filas"
+  },
+  "columnList": {
+    "title": "Columnas disponibles",
+    "hint": "Arrastra las columnas al área de la derecha. Puedes usar la misma columna varias veces."
+  },
+  "schema": {
+    "title": "Estructura del JSON",
+    "outputFormat": "Formato de salida",
+    "arrayMode": "Array de objetos",
+    "hashMode": "Hash (objeto)",
+    "keyColumn": "Columna como key:",
+    "dropHint": "Arrastra columnas aquí para construir tu JSON",
+    "dropHintAlt": "O usa los botones de abajo para agregar campos y grupos",
+    "addField": "+ Agregar campo",
+    "addGroup": "+ Agregar grupo",
+    "addSubgroup": "+ Subgrupo",
+    "groupNamePrompt": "Nombre del grupo:",
+    "subgroupNamePrompt": "Nombre del nuevo grupo:",
+    "rename": "Renombrar",
+    "delete": "Eliminar",
+    "dropHere": "soltar aquí",
+    "dropFieldHere": "↓ Soltar campo aquí",
+    "dragFieldsHere": "Arrastra campos aquí"
+  },
+  "jsonPreview": {
+    "title": "Preview del JSON",
+    "showingOf": "Mostrando {{shown}} de {{total}} filas",
+    "copied": "Copiado",
+    "copyAll": "Copiar todo",
+    "download": "Descargar .json",
+    "addFieldsHint": "Agrega campos al schema para ver el JSON",
+    "total": "Total: {{count}} registros",
+    "estimatedSize": "Tamaño estimado: {{size}} KB"
+  }
+}
+

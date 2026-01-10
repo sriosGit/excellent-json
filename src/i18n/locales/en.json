@@ -1,0 +1,56 @@
+{
+  "app": {
+    "title": "Excellent JSON",
+    "subtitle": "Convert Excel to JSON with custom structure",
+    "footer": "All processing happens in your browser. Your data never leaves your computer."
+  },
+  "upload": {
+    "title": "Start by uploading your file",
+    "subtitle": "We support Excel files (.xlsx, .xls) and CSV",
+    "dropzone": "Drag your Excel file here",
+    "or": "or",
+    "clickToSelect": "click to select",
+    "processing": "Processing file...",
+    "invalidFile": "Please select an Excel file (.xlsx, .xls) or CSV"
+  },
+  "preview": {
+    "changeFile": "Change file",
+    "rows": "rows",
+    "columns": "columns",
+    "showingOf": "Showing {{shown}} of {{total}} rows"
+  },
+  "columnList": {
+    "title": "Available columns",
+    "hint": "Drag columns to the area on the right. You can use the same column multiple times."
+  },
+  "schema": {
+    "title": "JSON Structure",
+    "outputFormat": "Output format",
+    "arrayMode": "Array of objects",
+    "hashMode": "Hash (object)",
+    "keyColumn": "Column as key:",
+    "dropHint": "Drag columns here to build your JSON",
+    "dropHintAlt": "Or use the buttons below to add fields and groups",
+    "addField": "+ Add field",
+    "addGroup": "+ Add group",
+    "addSubgroup": "+ Subgroup",
+    "groupNamePrompt": "Group name:",
+    "subgroupNamePrompt": "New group name:",
+    "rename": "Rename",
+    "delete": "Delete",
+    "dropHere": "drop here",
+    "dropFieldHere": "↓ Drop field here",
+    "dragFieldsHere": "Drag fields here"
+  },
+  "jsonPreview": {
+    "title": "JSON Preview",
+    "showingOf": "Showing {{shown}} of {{total}} rows",
+    "copied": "Copied",
+    "copyAll": "Copy all",
+    "download": "Download .json",
+    "addFieldsHint": "Add fields to the schema to see the JSON",
+    "total": "Total: {{count}} records",
+    "estimatedSize": "Estimated size: {{size}} KB"
+  }
+}
+
