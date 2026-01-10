@@ -50,7 +50,8 @@
     "download": "Descargar .json",
     "addFieldsHint": "Agrega campos al schema para ver el JSON",
     "total": "Total: {{count}} registros",
-    "estimatedSize": "Tamaño estimado: {{size}} KB"
+    "estimatedSize": "Tamaño estimado: {{size}} KB",
+    "minify": "Minificar"
   }
 }
 

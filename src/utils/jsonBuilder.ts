@@ -65,8 +65,8 @@ export function buildJSON(
 /**
  * Formatea el JSON con indentación para visualización
  */
-export function formatJSON(data: unknown): string {
-  return JSON.stringify(data, null, 2)
+export function formatJSON(data: unknown, minified: boolean = false): string {
+  return minified ? JSON.stringify(data) : JSON.stringify(data, null, 2)
 }
 
 /**
