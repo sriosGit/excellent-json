@@ -4,6 +4,9 @@
     "subtitle": "Convert Excel to JSON with custom structure",
     "footer": "All processing happens in your browser. Your data never leaves your computer."
   },
+  "support": {
+    "button": "Support this project"
+  },
   "upload": {
     "title": "Start by uploading your file",
     "subtitle": "We support Excel files (.xlsx, .xls) and CSV",

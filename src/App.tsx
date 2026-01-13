@@ -23,6 +23,7 @@ import { SchemaBuilder } from './components/SchemaBuilder'
 import { JSONPreview } from './components/JSONPreview'
 import { LanguageSwitcher } from './components/LanguageSwitcher'
 import { Logo } from './components/Logo'
+import { SupportButton } from './components/SupportButton'
 import { DragOverGroupContext } from './context/DragOverGroupContext'
 
 // Estrategia de colisión personalizada que prioriza los droppables de grupos
@@ -279,7 +280,10 @@ function App() {
               </div>
             </div>
 
-            <LanguageSwitcher />
+            <div className="flex items-center gap-3">
+              <SupportButton />
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </header>
