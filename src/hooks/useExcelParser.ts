@@ -30,7 +30,8 @@ export function useExcelParser(): UseExcelParserResult {
       // Convertir a JSON (raw: false formatea fechas como strings legibles)
       const jsonData = XLSX.utils.sheet_to_json<Record<string, unknown>>(worksheet, {
         raw: false,
-        dateNF: 'yyyy-mm-dd'  // Formato ISO para fechas
+        dateNF: 'yyyy-mm-dd',  // Formato ISO para fechas
+        defval: ''             // Valor por defecto para celdas vacías
       })
 
       if (jsonData.length === 0) {
