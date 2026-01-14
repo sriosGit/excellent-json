@@ -49,11 +49,8 @@ export function buildJSON(
           // Sin schema: mostrar objeto vacío para cada key
           result[key] = {}
         } else {
-          // Con schema: construir el objeto excluyendo la columna usada como key
-          const schemaWithoutKey = schema.filter(
-            node => !(node.type === 'field' && node.originalName === exportMode.keyColumn)
-          )
-          result[key] = buildObjectFromSchema(row, schemaWithoutKey)
+          // Con schema: construir el objeto incluyendo todos los campos del schema
+          result[key] = buildObjectFromSchema(row, schema)
         }
       }
     }
