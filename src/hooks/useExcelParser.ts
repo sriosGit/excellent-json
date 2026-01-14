@@ -18,14 +18,20 @@ export function useExcelParser(): UseExcelParserResult {
 
     try {
       const arrayBuffer = await file.arrayBuffer()
-      const workbook = XLSX.read(arrayBuffer, { type: 'array' })
+      const workbook = XLSX.read(arrayBuffer, { 
+        type: 'array',
+        cellDates: true  // Convertir fechas de Excel a objetos Date
+      })
 
       // Usar la primera hoja
       const firstSheetName = workbook.SheetNames[0]
       const worksheet = workbook.Sheets[firstSheetName]
 
-      // Convertir a JSON
-      const jsonData = XLSX.utils.sheet_to_json<Record<string, unknown>>(worksheet)
+      // Convertir a JSON (raw: false formatea fechas como strings legibles)
+      const jsonData = XLSX.utils.sheet_to_json<Record<string, unknown>>(worksheet, {
+        raw: false,
+        dateNF: 'yyyy-mm-dd'  // Formato ISO para fechas
+      })
 
       if (jsonData.length === 0) {
         throw new Error('El archivo Excel está vacío o no tiene datos válidos')
