@@ -38,14 +38,24 @@ export function useExcelParser(): UseExcelParserResult {
         throw new Error('El archivo Excel está vacío o no tiene datos válidos')
       }
 
-      // Obtener nombres de columnas de la primera fila
-      const columns = Object.keys(jsonData[0])
+      // Obtener nombres de columnas, filtrando las columnas vacías (__EMPTY, __empty, etc.)
+      const allColumns = Object.keys(jsonData[0])
+      const columns = allColumns.filter(col => !col.toLowerCase().startsWith('__empty'))
+
+      // Limpiar las filas removiendo las columnas vacías
+      const cleanedRows = jsonData.map(row => {
+        const cleanedRow: Record<string, unknown> = {}
+        for (const col of columns) {
+          cleanedRow[col] = row[col]
+        }
+        return cleanedRow
+      })
 
       const result: ExcelData = {
         columns,
-        rows: jsonData,
+        rows: cleanedRows,
         fileName: file.name,
-        totalRows: jsonData.length
+        totalRows: cleanedRows.length
       }
 
       setIsLoading(false)
